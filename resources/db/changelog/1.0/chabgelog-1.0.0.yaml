@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Student Table
+      author: Fuad Muradov
+      changes:
+        - createTable:
+            tableName: students
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: surname
+                  type: varchar(70)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: gpa
+                  type: numeric(4,2)
+                  constraints:
+                    nullable: true
+            remarks: Table include Student information

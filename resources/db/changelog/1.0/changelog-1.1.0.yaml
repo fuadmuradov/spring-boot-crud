@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create Lessons Table
+      author: Fuad Muradov
+      changes:
+        - createTable:
+            tableName: lessons
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: priority
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+            remarks: Contain Information about lessont and their priority
